@@ -1,12 +1,168 @@
 
-/* 
+.carousel-item{
+	min-height: 100vh;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+.carousel-item:before{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: -1;
+}
+.carousel-item .container{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+ .carousel-item h2{
+	font-size: 80px;
+	color: #ffffff;
+	margin:0 0 10px;
+	opacity: 0;
+}
+ .carousel-item p{
+	font-size: 30px;
+	margin:0;
+	color: #eeeeee;
+	opacity:0;
+}
+ .carousel-item.active h2{
+	animation: fadeInLeft 0.5s ease forwards;
+}
+.carousel-item.active p{
+	animation: fadeInRight 0.5s ease forwards;
+}
+@keyframes fadeInLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeInRight{
+	0%{
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@media(max-width: 767px){
+	.carousel-control-next, 
+	 .carousel-control-prev{
+		display: none;
+	}
+	 .carousel-indicators li{
+		height: 60px;
+		width: 60px;
+	}
+	 .carousel-item h2{
+		font-size: 45px;
+	}
+	 .carousel-item p{
+		font-size: 22px;
+	}
+  }
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+  .fade-in {
+	opacity: 1;
+	transition: opacity 0.5s ease-in;
+  }
+  
+  .fade-out {
+	opacity: 0;
+	transition: opacity 0.5s ease-out;
+  }
+  
 
-*/
+
+
+  body {
+	font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  
+  a {
+	-webkit-transition: .3s all ease;
+	-o-transition: .3s all ease;
+	transition: .3s all ease; }
+	a, a:hover {
+	  text-decoration: none !important; }
+  
+  .content {
+	height: 70vh; }
+  
+  .footer-20192 {
+	position: relative;
+	color: #fff;
+	padding: 7rem 0;
+	background-color: #141d2a; }
+	.footer-20192 .container {
+	  position: relative; }
+	.footer-20192 h3 {
+	  font-size: 16px;
+	  margin-bottom: 10px;
+	  margin-top: 0;
+	  line-height: 1.5; }
+	.footer-20192 .links li {
+	  margin-bottom: 10px;
+	  line-height: 1.5;
+	  display: block; }
+	  .footer-20192 .links li a {
+		color: #666873; }
+		.footer-20192 .links li a:hover {
+		  color: #fff; }
+	.footer-20192 .social li {
+	  display: inline-block;
+	  position: relative; }
+	  .footer-20192 .social li a {
+		position: relative;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		background-color: #8186d5;
+		color: #fff; }
+		.footer-20192 .social li a > span {
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  -webkit-transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  transform: translate(-50%, -50%); }
+	.footer-20192 .footer-logo {
+	  color: #fff;
+	  font-size: 20px;
+	  text-transform: uppercase;
+	  letter-spacing: .1rem; }
+	.footer-20192 .copyright {
+	  color: #666873; }
+	.footer-20192 .cta {
+	  -webkit-box-shadow: -20px -20px 0 0 rgba(52, 58, 64, 0.2);
+	  box-shadow: -20px -20px 0 0 rgba(52, 58, 64, 0.2);
+	  padding: 20px;
+	  background-color:rgb(187, 189, 181);
+	  top: -150px;
+	  position: relative; }
+	  .footer-20192 .cta h2, .footer-20192 .cta h3 {
+		line-height: 1.5; }
+	  .footer-20192 .cta h3 {
+		font-size: 20px; }
