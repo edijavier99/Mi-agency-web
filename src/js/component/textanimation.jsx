@@ -2,8 +2,8 @@ import React from "react";
 import  { useState, useEffect } from 'react';
 
 let AnimatedText = (props)=>{
-    let {frase1,frase2} = props
-    const names = [`${frase1}`, `${frase2}`];
+    let {frase1,frase2,frase} = props
+    const names = [`${frase1}`, `${frase2}`, `${frase}`];
 
     const [nameIndex, setNameIndex] = useState(0);
     const [showName, setShowName] = useState(true);
@@ -23,7 +23,7 @@ let AnimatedText = (props)=>{
     }, []);
   
   return (
-    <div class="container-fluid d-flex align-items-center justify-content-center animatedText flex-row" style={{ height: '250px' }}>
+    <div class="container-fluid d-flex align-items-center justify-content-center animatedText flex-row" style={{ height: '300px' }}>
         <div class="d-flex align-items-center justify-content-center mx-3 ">
         <h6>Estamos aqui para ayudarte</h6>     
          </div>
