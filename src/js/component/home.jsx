@@ -17,7 +17,7 @@ import foto5 from "../../img/slide-3.jpg";
 //create your first component
 const Home = () => {
 	let menu = [
-		{ label: "Home" },
+		{ label: "Home", url : <Reviews/> },
 		{ label: "Contact Us"},
 		{ label: "About Us"},
 		{label : "Portafolio"}

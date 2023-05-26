@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./button.jsx";
 
 let Carousel = (props) =>{
   let {foto1,foto2} = props
@@ -14,14 +15,26 @@ let Carousel = (props) =>{
   <div class="carousel-item active" style={{ backgroundImage: `url(${foto1})` }} >
       <div class="container">
          <h2>WEB DESING</h2>
-         <p>Somos lo que ven de nosotros</p>
+         <p class="mb-4">Somos lo que ven de nosotros</p>
+          <Button
+            class="btn"
+            color="primary"
+            url="https://www.w3schools.com"
+            name="Contac Us"
+          /> 
       </div>
     </div>
 
     <div class="carousel-item " style={{ backgroundImage: `url(${foto2})` }} >
       <div class="container">
       <h2>Edi Javier</h2>
-        <p>Web developer</p>
+        <p class="mb-4">Web developer</p>
+        <Button
+            class="btn"
+            color="primary"
+            url="https://www.w3schools.com"
+            name="Contac Us"
+          /> 
       </div>
     </div>
   </div>

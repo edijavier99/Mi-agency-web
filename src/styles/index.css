@@ -13,7 +13,7 @@
 	top:0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.4);
 	z-index: -1;
 }
 .carousel-item .container{
@@ -41,6 +41,10 @@
 .carousel-item.active p{
 	animation: fadeInRight 0.5s ease forwards;
 }
+.carousel-item.active .btn {
+	animation: fadeInLeft 0.5s ease forwards;
+}
+
 @keyframes fadeInLeft{
 	0%{
 		opacity: 0;

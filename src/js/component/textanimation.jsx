@@ -23,7 +23,7 @@ let AnimatedText = (props)=>{
     }, []);
   
   return (
-    <div class="container-fluid d-flex align-items-center justify-content-center animatedText flex-row" style={{ height: '300px' }}>
+    <div class="container-fluid bg-light d-flex align-items-center justify-content-center animatedText flex-row my-4" style={{ height: '300px'}}>
         <div class="d-flex align-items-center justify-content-center mx-3 ">
         <h6>Estamos aqui para ayudarte</h6>     
          </div>
